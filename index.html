@@ -31,53 +31,54 @@
         }
         .button-container {
             display: flex;
-            gap: 50px; /* Збільшений пропуск між кнопками */
+            align-items: center;
+            justify-content: center;
+            gap: 40px; /* Пропуск між кнопками */
+            flex-wrap: wrap; /* Обгортання кнопок на новий ряд при необхідності */
         }
         .button {
-            background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 30px 60px;
+            padding: 20px 40px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 24px;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 6px;
+            flex: 1 1 auto; /* Розтягування кнопок, щоб займати рівний простір */
+            width: 170px; /* Максимальна ширина кнопок */
+            box-sizing: border-box;
+            
         }
-        .button:hover {
-            background-color: #45a049;
+        .button-ios {
+            background-color: #209ee7; /* Синій колір для iOS */
+        }
+
+        .button-ios:hover {
+            background-color: #198ccf; /* затемнення кнопки іос при наведенні */
+        }
+        .button-android {
+            background-color: #1fa73f; /* Зелений колір для Android */
+            
+        }
+        .button-android:hover {
+            background-color: #1b9838; /* затемнення кнопки іос при наведенні */
         }
 
         /* Адаптація під мобільні пристрої */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 20px;
-                margin-top: 60px;
-                margin-bottom: 20px;
-            }
-            .button-container {
-                flex-direction: column;
-                gap: 20px; /* Зменшення пропуску між кнопками */
-            }
             .button {
-                padding: 20px 40px; /* Зменшення розміру кнопок */
-                font-size: 18px;
+                padding: 20px 40px; /* Зменшені розміри кнопок для планшетів */
+                font-size: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 18px;
-                margin-top: 50px;
-                margin-bottom: 15px;
-            }
-            .button-container {
-                gap: 15px; /* Ще менший пропуск між кнопками */
-            }
             .button {
-                padding: 15px 30px; /* Ще менший розмір кнопок */
-                font-size: 16px;
+                padding: 15px 30px; /* Ще менший розмір кнопок для мобільних пристроїв */
+                font-size: 18px;
+                max-width: 200px; /* Ще менша максимальна ширина кнопок */
             }
         }
     </style>
@@ -86,10 +87,10 @@
     <header>
         <h2>Ajax Services beta</h2>
     </header>
-    <h1>Choose your phone operation systemу</h1>
+    <h1>Choose your phone operation system</h1>
     <div class="button-container">
-        <button class="button" onclick="location.href='ios.html'">iOS</button>
-        <button class="button" onclick="location.href='android.html'">Android</button>
+        <button class="button button-ios" onclick="location.href='ios.html'">iOS</button>
+        <button class="button button-android" onclick="location.href='android.html'">Android</button>
     </div>
 </body>
 </html>
