@@ -15,7 +15,6 @@
             height: 100vh;
             margin: 0;
             position: relative;
-            
         }
 
         header {
@@ -35,10 +34,10 @@
         h2 {
             max-width: 80%;
             text-align: center;
-            font-size: px;
+            font-size: 20px;
             line-height: 1.6;
             margin-top: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Зменшено відстань між текстом і кнопками */
             padding: 0 20px;
         }
 
@@ -50,33 +49,38 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 20px;
             margin: 10px;
             cursor: pointer;
             border-radius: 4px;
             position: absolute;
-            bottom: 50px;
+            bottom: 20px; /* Відступ від нижньої межі */
+            left: 20px; /* Відступ від лівого краю */
+            width: 160px;
         }
 
         .button_nextStep {
-    background-color: #18bb56;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    position: fixed;
-     /* Забезпечення правильного накладання над текстом */
-    position: absolute;
-            bottom: 270px;
-}
+            background-color: #1acf2f;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 20px; /* Відступ від нижньої межі */
+            right: 20px; /* Відступ від лівого краю */
+            width: 160px;
+        }
+
         .button_nextStep:hover {
             background-color: #16a44c;
         }
+
         .button_back:hover {
             background-color: #59576d;
         }
