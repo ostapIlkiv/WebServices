@@ -41,7 +41,16 @@
             padding: 0 20px;
         }
 
-        .button_back {
+        .button-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .button {
             background-color: #383748;
             border: none;
             color: white;
@@ -53,28 +62,11 @@
             margin: 10px;
             cursor: pointer;
             border-radius: 4px;
-            position: absolute;
-            bottom: 20px; /* Відступ від нижньої межі */
-            left: 20px; /* Відступ від лівого краю */
             width: 160px;
         }
 
         .button_nextStep {
             background-color: #1acf2f;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            position: absolute;
-            bottom: 20px; /* Відступ від нижньої межі */
-            right: 20px; /* Відступ від лівого краю */
-            width: 160px;
         }
 
         .button_nextStep:hover {
@@ -93,6 +85,17 @@
             h2 {
                 font-size: 16px;
             }
+
+            .button {
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 120px;
+            }
+
+            .button-container {
+                bottom: 10px;
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -103,10 +106,11 @@
 
     <h2>1.  Open Gmail </h2>
     <h2>2.  Find the letter from TestFlight App</h2>
-        
-<h2> 3.  Do all the instructions from the letter</h2>
+    <h2>3.  Do all the instructions from the letter</h2>
 
-    <button class="button_back" onclick="location.href='index.html'">Main Page</button>
-    <button class="button_nextStep" onclick="location.href='Step2IOS.html'">Next Step</button>
+    <div class="button-container">
+        <button class="button button_back" onclick="location.href='index.html'">Main Page</button>
+        <button class="button button_nextStep" onclick="location.href='Step2IOS.html'">Next Step</button>
+    </div>
 </body>
 </html>
