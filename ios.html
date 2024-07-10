@@ -42,7 +42,7 @@
             padding: 0 20px;
         }
 
-        .button {
+        .button_back {
             background-color: #383748;
             border: none;
             color: white;
@@ -58,7 +58,25 @@
             bottom: 50px;
         }
 
-        .button:hover {
+        .button_nextStep {
+            background-color: #18bb56;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 350px;
+        }
+        .button_nextStep:hover {
+            background-color: #16a44c;
+        }
+        .button_back:hover {
             background-color: #59576d;
         }
 
@@ -80,6 +98,7 @@
 
     <h2>Open Gmail -> find the letter from TestFlight App -> do all the instructions from the letter</h2>
 
-    <button class="button" onclick="location.href='index.html'">Back</button>
+    <button class="button_back" onclick="location.href='index.html'">Main Page</button>
+    <button class="button_nextStep" onclick="location.href='Step2IOS.html'">Next Step</button>
 </body>
 </html>
