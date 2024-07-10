@@ -8,13 +8,8 @@
         body {
             font-family: Arial;
             background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             margin: 0;
-            position: relative;
+            padding: 0;
         }
 
         header {
@@ -24,25 +19,33 @@
             text-align: center;
             position: fixed;
             top: 0;
-            height: 60px; /* Встановлення меншої висоти */
+            height: 65px; /* Встановлення меншої висоти */
             display: flex;
             align-items: center; /* Вирівнювання тексту по вертикалі */
             justify-content: center; /* Вирівнювання тексту по горизонталі */
         }
 
         h1 {
-            margin-top: 37px; /* Відступ зверху для врахування висоти заголовка */
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .content {
+            margin-left: 50px;
+            margin-top: 85px; /* Відступ зверху для врахування висоти заголовка */
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .step {
             margin-bottom: 20px;
         }
 
-        h2 {
-            max-width: 80%;
-            text-align: center;
-            font-size: 20px;
-            line-height: 1.6;
-            margin-top: 20px;
-            margin-bottom: 20px; /* Зменшено відстань між текстом і кнопками */
-            padding: 0 20px;
+        .step img {
+            width: 50%; /* Зробити зображення на всю ширину контейнера .step */
+            height: auto; /* Автоматично встановлювати висоту для збереження пропорцій */
+            margin-top: 10px;
         }
 
         .button-container {
@@ -52,6 +55,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0 20px;
+            box-sizing: border-box;
         }
 
         .button {
@@ -84,12 +88,8 @@
         /* Медіа-запити для адаптивного оформлення */
         @media screen and (max-width: 768px) {
             h1 {
-                font-size: 24px;
+                font-size: 14px; /* Додаткове зменшення розміру шрифту для мобільних пристроїв */
             }
-            h2 {
-                font-size: 16px;
-            }
-
             .button {
                 font-size: 16px;
                 padding: 10px 20px;
@@ -108,9 +108,19 @@
         <h1>Step 1. Beta version of the app</h1>
     </header>
 
-    <h2>1. Open Gmail</h2>
-    <h2>2. Find the letter from TestFlight App</h2>
-    <h2>3. Do all the instructions from the letter</h2>
+    <div class="content">
+        <div class="step">
+            <h2>1. Open Gmail</h2>
+    
+        </div>
+        <div class="step">
+            <h2>2. Find the letter from TestFlight App</h2>
+            <img src="images/img.jpg" alt="Find the letter from TestFlight App">
+        </div>
+        <div class="step">
+            <h2>3. Do all the instructions from the letter</h2>
+        </div>
+    </div>
 
     <div class="button-container">
         <button class="button button_back" onclick="location.href='index.html'">Main Page</button>
